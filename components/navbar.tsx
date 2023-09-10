@@ -22,8 +22,10 @@ export default function NavBar({ links }: Props) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            {links.map((link) => (
-              <Nav.Link href={link.href}>{link.title}</Nav.Link>
+            {links.map((link, idx) => (
+              <Nav.Link key={idx} href={link.href}>
+                {link.title}
+              </Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>
