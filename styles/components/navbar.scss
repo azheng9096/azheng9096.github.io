@@ -6,21 +6,16 @@
 
   position: absolute;
   width: 100%;
-}
 
-.nav-link {
-  text-align: right;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.navbar-dark {
   .navbar-brand {
     color: var(--primary-text-color);
   }
 
   .navbar-nav {
     .nav-link {
+      text-align: right;
+      margin-left: 10px;
+      margin-right: 10px;
       color: var(--primary-text-color);
 
       &.active,
