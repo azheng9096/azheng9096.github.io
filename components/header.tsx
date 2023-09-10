@@ -1,5 +1,5 @@
 import Image from "next/image";
-// import profilePic from "/images/birb.jpg";
+import profilePic from "../public/images/birb.jpg";
 import "@/styles/components/header.scss";
 
 type Props = {
@@ -16,12 +16,7 @@ export default function Header({ links }: Props) {
     <div className="row">
       <div className="col-md-12 text-white" id="header">
         <div id="display">
-          <Image
-            src="/images/birb.jpg"
-            alt="Profile Picture"
-            width="50"
-            height="50"
-          />
+          <Image src={profilePic} alt="Profile Picture" />
           <div id="headerText">
             <h1 id="title">
               Welcome to <span id="headerName">Anna Zheng's</span> Portfolio
