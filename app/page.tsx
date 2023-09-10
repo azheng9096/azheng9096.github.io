@@ -7,12 +7,24 @@ const navLinks = [
   { title: "Programs", href: "#programs" },
 ];
 
+const socialLinks = [
+  { title: "GitHub", href: "https://github.com/azheng9096" },
+  {
+    title: "Handshake",
+    href: "https://nyu.joinhandshake.com/stu/users/27360975",
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/anna-zheng-965866203/",
+  },
+];
+
 export default function Home() {
   return (
     <>
       <NavBar links={navLinks} />
       <div className="container-fluid">
-        <Header />
+        <Header links={socialLinks} />
       </div>
     </>
   );

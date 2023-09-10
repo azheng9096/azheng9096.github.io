@@ -2,7 +2,16 @@ import Image from "next/image";
 // import profilePic from "/images/birb.jpg";
 import "@/styles/components/header.scss";
 
-export default function Header() {
+type Props = {
+  links: SocialLink[];
+};
+
+type SocialLink = {
+  title: string;
+  href: string;
+};
+
+export default function Header({ links }: Props) {
   return (
     <div className="row">
       <div className="col-md-12 text-white" id="header">
@@ -29,19 +38,11 @@ export default function Header() {
 
         <div id="headerSocial">
           <ul>
-            <li>
-              <a href="https://github.com/azheng9096">GitHub</a>
-            </li>
-            <li>
-              <a href="https://nyu.joinhandshake.com/stu/users/27360975">
-                Handshake
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/anna-zheng-965866203/">
-                LinkedIn
-              </a>
-            </li>
+            {links.map((link) => (
+              <li>
+                <a href={link.href}>{link.title}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
