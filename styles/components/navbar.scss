@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #00000000;
+  background-color: var(--transparent);
 
   font-size: 13.5px;
   letter-spacing: 2px;
@@ -16,20 +16,21 @@
 
 .navbar-dark {
   .navbar-brand {
-    color: whitesmoke;
+    color: var(--primary-text-color);
   }
 
   .navbar-nav {
     .nav-link {
-      color: whitesmoke;
-    }
-    .nav-link.active,
-    .nav-link:hover {
-      color: #1ef4a2;
-    }
+      color: var(--primary-text-color);
 
-    .nav-link.active {
-      border-bottom: 1px solid #1ef4a2;
+      &.active,
+      &:hover {
+        color: var(--secondary-text-color);
+      }
+
+      &.active {
+        border-bottom: 1px solid var(--secondary-text-color);
+      }
     }
   }
 }

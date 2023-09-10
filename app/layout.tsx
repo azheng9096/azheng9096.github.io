@@ -3,8 +3,18 @@ import { Montserrat, Raleway } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.css";
 import "@/styles/globals.scss";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
-const raleway = Raleway({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400"],
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+const raleway = Raleway({
+  weight: ["100", "200", "300", "400"],
+  subsets: ["latin"],
+  variable: "--font-raleway",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Anna Zheng's Portfolio",
@@ -19,7 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${montserrat.variable} ${raleway.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

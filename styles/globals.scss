@@ -1,17 +1,16 @@
+:root {
+  --primary-text-color: whitesmoke;
+  --secondary-text-color: #1ef4a2;
+  --link-hover-color: rgb(185, 185, 185);
+  --transparent: #00000000;
+}
+
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
   background-color: black;
 }
 

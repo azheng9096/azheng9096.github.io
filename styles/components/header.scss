@@ -1,0 +1,118 @@
+#header {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(75, 75, 75);
+  background-blend-mode: multiply;
+  background-image: url("/images/background.jpg");
+  /* Image source: https://unsplash.com/photos/2Hzmz15wGik 
+      (pine watt) */
+
+  background-position: center;
+
+  #display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* text-align: center; */
+    width: 70%;
+  }
+
+  #title {
+    /*
+    padding-left: 5vw;
+    padding-right: 5vw;
+    */
+
+    font-family: var(--font-raleway);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  #headerName {
+    color: #25ff75;
+    transition: text-shadow 0.3s ease-in-out;
+    &:hover {
+      text-shadow: 1px 1px 12.5px rgba(150, 150, 150, 0.65);
+    }
+  }
+
+  #sub {
+    font-family: var(--font-raleway);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    font-size: calc(12.5px + 0.25vw);
+  }
+
+  img {
+    width: calc(50px + 3.5vw);
+    height: calc(50px + 3.5vw);
+
+    border-radius: 50%;
+    outline: 4.5px solid var(--primary-text-color);
+
+    /*
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -65%;
+    */
+  }
+}
+
+#headerSocial {
+  position: absolute;
+  bottom: calc(15px + 0.5vw);
+  right: calc(15px + 0.5vw);
+
+  text-align: end;
+
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+    font-size: calc(10.5px + 0.25vw);
+    letter-spacing: 1px;
+
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  #header #display {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+
+    #headerText {
+      margin-right: 2.5vw;
+    }
+
+    img {
+      margin-left: 2.5vw;
+    }
+  }
+}
