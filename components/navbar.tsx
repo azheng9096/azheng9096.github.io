@@ -1,7 +1,7 @@
 "use client";
 
 import "@/styles/components/navbar.scss";
-import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 type Props = {
   links: NavBarLink[];
