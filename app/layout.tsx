@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Raleway } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
 import "bootstrap/dist/css/bootstrap.css";
+import "@/styles/common.scss";
 import "@/styles/globals.scss";
 
 const montserrat = Montserrat({

@@ -1,5 +1,7 @@
+import FullHeightContainer from "@/components/fullHeightContainer";
 import Header from "@/components/header";
 import NavBar from "@/components/navbar";
+import ProjectsCarousel from "@/components/projectsCarousel";
 
 const navLinks = [
   { title: "Games", href: "#games" },
@@ -26,6 +28,9 @@ export default function Home() {
       <div className="container-fluid">
         <Header links={socialLinks} />
       </div>
+      {/* <FullHeightContainer className="primary-background">
+        <ProjectsCarousel />
+      </FullHeightContainer> */}
     </>
   );
 }

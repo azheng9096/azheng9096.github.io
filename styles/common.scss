@@ -1,3 +1,11 @@
 .adjustedPFont {
   font-size: calc(10px + 0.25vw);
 }
+
+.primary-background {
+  background-color: var(--primary-background-color);
+}
+
+.secondary-background {
+  background-color: var(--secondary-background-color);
+}
