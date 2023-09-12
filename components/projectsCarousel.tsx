@@ -208,8 +208,8 @@ export default function ProjectsCarousel({
   return (
     <CarouselWrapper>
       <Carousel interval={null}>
-        {group(content, projsPerPage).map((page) => (
-          <CarouselItem>
+        {group(content, projsPerPage).map((page, pageIdx) => (
+          <CarouselItem key={pageIdx}>
             <CarouselContent
               className={`w-100 ${smDeviceCondense && "condense-sm"}`}
             >
@@ -218,10 +218,10 @@ export default function ProjectsCarousel({
                   Array(projsPerPage - page.length).fill(defaultProject)
                 ),
                 cols
-              ).map((row) => (
-                <CarouselRow>
-                  {row.map((col) => (
-                    <CarouselCol spacing={projectSpacing}>
+              ).map((row, rowIdx) => (
+                <CarouselRow key={rowIdx}>
+                  {row.map((col, colIdx) => (
+                    <CarouselCol spacing={projectSpacing} key={colIdx}>
                       <CarouselBoxLinkWrap href={col.link?.href}>
                         <div
                           className={`carouselBoxDiv ${aspectRatio}`}
@@ -243,8 +243,11 @@ export default function ProjectsCarousel({
                                 {col.description}
                               </p>
                               <div className="carouselBoxContentTagsContainer">
-                                {col.tags.map((tag) => (
-                                  <Tag className="carouselBoxContentTag">
+                                {col.tags.map((tag, tagIdx) => (
+                                  <Tag
+                                    className="carouselBoxContentTag"
+                                    key={tagIdx}
+                                  >
                                     {tag}
                                   </Tag>
                                 ))}

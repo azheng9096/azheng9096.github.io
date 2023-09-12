@@ -91,8 +91,8 @@ export default function Header({ links }: Props) {
 
         <div id="headerSocial">
           <ul>
-            {links.map((link, i) => (
-              <li key={i}>
+            {links.map((link, idx) => (
+              <li key={idx}>
                 <a href={link.href}>{link.title}</a>
               </li>
             ))}

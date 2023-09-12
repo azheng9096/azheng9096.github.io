@@ -171,8 +171,8 @@ export default function Footer({ links, icons }: Props) {
         <hr />
         <FooterTextContainer>
           <FooterLinks>
-            {links.map((link, i) => (
-              <li key={i}>
+            {links.map((link, idx) => (
+              <li key={idx}>
                 <a href={link.href}>{link.title}</a>
               </li>
             ))}
@@ -184,8 +184,8 @@ export default function Footer({ links, icons }: Props) {
       <SocialMediaContainer className="col-3">
         <SocialMediaText>Social Media</SocialMediaText>
         <IconsContainer>
-          {icons.map((icon, i) => (
-            <a href={icon.href} target="_blank" key={i}>
+          {icons.map((icon, idx) => (
+            <a href={icon.href} target="_blank" key={idx}>
               <Image
                 src={`/images/${icon.imagePath}`}
                 width={50}

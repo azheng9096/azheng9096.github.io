@@ -4,6 +4,7 @@ import "@/styles/components/projectCard.scss";
 import styled from "styled-components";
 import { Project } from "@/types/project";
 import { projectImagePath } from "@/utils/constants";
+import React from "react";
 
 type Props = {
   project: Project;
@@ -60,13 +61,15 @@ export default function ProjectCard({ project }: Props) {
             <>
               <Dropdown.Toggle />
               <Dropdown.Menu>
-                {project.moreLinks.map((link, i, proj) => (
-                  <>
-                    <Dropdown.Item href={link.href} key={i}>
+                {project.moreLinks.map((link, idx, proj) => (
+                  <React.Fragment key={idx}>
+                    <Dropdown.Item href={link.href}>
                       {link.content || "Currently Unavailable"}
                     </Dropdown.Item>
-                    {i < proj.length - 1 && <hr className="dropdown-divider" />}
-                  </>
+                    {idx < proj.length - 1 && (
+                      <hr className="dropdown-divider" />
+                    )}
+                  </React.Fragment>
                 ))}
               </Dropdown.Menu>
             </>
