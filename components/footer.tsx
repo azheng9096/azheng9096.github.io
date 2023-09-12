@@ -1,14 +1,22 @@
 "use client";
+import Image from "next/image";
 import { deviceSizes } from "@/utils/constants";
 import styled from "styled-components";
 
 type Props = {
-  links: FooterLinks;
+  links: FooterLink[];
+  icons: FooterIcons[];
 };
 
-type FooterLinks = {
+type FooterLink = {
   title: string;
   href: string;
+};
+
+type FooterIcons = {
+  href: string;
+  imagePath: string;
+  title?: string;
 };
 
 const PortoflioFooter = styled.div`
@@ -151,7 +159,7 @@ const IconsContainer = styled.div`
   }
 `;
 
-export default function Footer() {
+export default function Footer({ links, icons }: Props) {
   return (
     <PortoflioFooter className="row">
       <FooterLeft className="col-9">
@@ -159,18 +167,11 @@ export default function Footer() {
         <hr />
         <FooterTextContainer>
           <FooterLinks>
-            <li>
-              <a href="#">Top</a>
-            </li>
-            <li>
-              <a href="#games">Games</a>
-            </li>
-            <li>
-              <a href="#websites">Websites</a>
-            </li>
-            <li>
-              <a href="#programs">Programs</a>
-            </li>
+            {links.map((link, i) => (
+              <li key={i}>
+                <a href={link.href}>{link.title}</a>
+              </li>
+            ))}
           </FooterLinks>
           <p>Created by Anna Zheng</p>
         </FooterTextContainer>
@@ -179,23 +180,16 @@ export default function Footer() {
       <SocialMediaContainer className="col-3">
         <p className="adjustedPFont">Social Media</p>
         <IconsContainer>
-          <a href="https://github.com/azheng9096" target="_blank">
-            <img src="images/github.png" />
-          </a>
-
-          <a
-            href="https://nyu.joinhandshake.com/stu/users/27360975"
-            target="_blank"
-          >
-            <img src="images/handshake.png" />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/anna-zheng-965866203/"
-            target="_blank"
-          >
-            <img src="images/linkedin.png" />
-          </a>
+          {icons.map((icon, i) => (
+            <a href={icon.href} target="_blank" key={i}>
+              <Image
+                src={`/images/${icon.imagePath}`}
+                width={50}
+                height={50}
+                alt={`${icon.title}`}
+              />
+            </a>
+          ))}
         </IconsContainer>
       </SocialMediaContainer>
     </PortoflioFooter>

@@ -17,32 +17,22 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { title: "GitHub", href: "https://github.com/azheng9096" },
+  {
+    title: "GitHub",
+    href: "https://github.com/azheng9096",
+    imagePath: "github.png",
+  },
   {
     title: "Handshake",
     href: "https://nyu.joinhandshake.com/stu/users/27360975",
+    imagePath: "handshake.png",
   },
   {
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/anna-zheng-965866203/",
+    imagePath: "linkedin.png",
   },
 ];
-
-const mock = [
-  {
-    header: "Condemned",
-    description:
-      "You are a prisoner of the first circle of Hell freed by a strange benefactor who gives you a new purpose in death - fighting your way down to the ninth circle using the chains that once held you captive.",
-    tags: ["Unity"],
-    imagePath: "",
-    link: { href: "https://bluetitanium.itch.io/vk-00m3" },
-  },
-];
-
-const mockSection = {
-  heading: "Game",
-  description: "Game Design and Development",
-};
 
 export default function Home() {
   return (
@@ -52,7 +42,10 @@ export default function Home() {
         <Header links={socialLinks} />
       </div>
       <div className="container-fluid">
-        <HorizontalSection className="primary-background" {...mockSection}>
+        <HorizontalSection
+          className="primary-background"
+          {...projectData.games}
+        >
           <ProjectsCarousel
             content={projectData.games.projects}
             rows={2}
@@ -60,7 +53,10 @@ export default function Home() {
             smDeviceCondense
           />
         </HorizontalSection>
-        <VerticalSection {...mockSection} className="secondary-background">
+        <VerticalSection
+          {...projectData.websites}
+          className="secondary-background"
+        >
           <HorizontalScrollContainer>
             {projectData.websites.projects.map((proj) => (
               <ProjectCard project={proj}></ProjectCard>
@@ -69,8 +65,7 @@ export default function Home() {
         </VerticalSection>
         <HorizontalSection
           className="primary-background"
-          {...mockSection}
-          extraInfo="*Repo available upon request and approval"
+          {...projectData.programs}
         >
           <ProjectsCarousel
             content={projectData.programs.projects}
@@ -81,7 +76,10 @@ export default function Home() {
             projectSpacing={5}
           />
         </HorizontalSection>
-        <Footer />
+        <Footer
+          links={[{ title: "Top", href: "#" }, ...navLinks]}
+          icons={socialLinks}
+        />
       </div>
     </>
   );
