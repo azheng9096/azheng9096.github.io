@@ -159,6 +159,10 @@ const IconsContainer = styled.div`
   }
 `;
 
+const SocialMediaText = styled.p`
+  font-size: calc(10px + 0.25vw);
+`;
+
 export default function Footer({ links, icons }: Props) {
   return (
     <PortoflioFooter className="row">
@@ -178,7 +182,7 @@ export default function Footer({ links, icons }: Props) {
       </FooterLeft>
 
       <SocialMediaContainer className="col-3">
-        <p className="adjustedPFont">Social Media</p>
+        <SocialMediaText>Social Media</SocialMediaText>
         <IconsContainer>
           {icons.map((icon, i) => (
             <a href={icon.href} target="_blank" key={i}>
