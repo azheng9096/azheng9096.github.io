@@ -1,7 +1,9 @@
-import FullHeightContainer from "@/components/fullHeightContainer";
 import Header from "@/components/header";
 import NavBar from "@/components/navbar";
 import ProjectsCarousel from "@/components/projectsCarousel";
+import HorizontalSection from "@/components/sections/horizontalSection";
+import { AspectRatio } from "@/utils/constants";
+import { CarouselContentAlignment } from "@/utils/projectsCarousel";
 
 const navLinks = [
   { title: "Games", href: "#games" },
@@ -32,6 +34,11 @@ const mock = [
   },
 ];
 
+const mockSection = {
+  heading: "Game",
+  description: "Game Design and Development",
+};
+
 export default function Home() {
   return (
     <>
@@ -39,9 +46,20 @@ export default function Home() {
       <div className="container-fluid">
         <Header links={socialLinks} />
       </div>
-      <FullHeightContainer className="primary-background">
-        <ProjectsCarousel content={mock} rows={2} cols={2} />
-      </FullHeightContainer>
+      <div className="container-fluid">
+        <HorizontalSection className="primary-background" {...mockSection}>
+          <ProjectsCarousel content={mock} rows={2} cols={2} smDeviceCondense />
+        </HorizontalSection>
+        <HorizontalSection className="primary-background" {...mockSection}>
+          <ProjectsCarousel
+            content={mock}
+            rows={2}
+            cols={3}
+            aspectRatio={AspectRatio.OneToOne}
+            contentAlign={CarouselContentAlignment.End}
+          />
+        </HorizontalSection>
+      </div>
     </>
   );
 }

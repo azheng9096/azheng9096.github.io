@@ -1,9 +1,10 @@
 "use client";
 import { Project } from "@/types/project";
-import { deviceSizes } from "@/utils/constants";
+import { AspectRatio, deviceSizes } from "@/utils/constants";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import styled from "styled-components";
 import "@/styles/components/projectsCarousel.scss";
+import { CarouselContentAlignment } from "@/utils/projectsCarousel";
 
 type Props = {
   content: Project[];
@@ -11,43 +12,8 @@ type Props = {
   cols: number;
   aspectRatio?: AspectRatio;
   contentAlign?: CarouselContentAlignment;
+  smDeviceCondense?: boolean;
 };
-
-enum AspectRatio {
-  OneToOne = "one-to-one",
-  FourToThree = "four-to-three",
-  SixteenToNine = "sixteen-to-nine",
-}
-
-enum CarouselContentAlignment {
-  Center = "carousel-content-center",
-  End = "carousel-content-end",
-}
-
-const CarouselRow = styled.div`
-  @media only screen and ${deviceSizes.lg} {
-    width: 100%;
-    display: flex;
-  }
-
-  @media only screen and ${deviceSizes.md} {
-    width: 100%;
-    display: flex;
-  }
-
-  @media only screen and ${deviceSizes.sm} {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const CarouselCol = styled.div`
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 const CarouselContent = styled.div`
   padding-left: 12.5%;
@@ -74,7 +40,36 @@ const CarouselContent = styled.div`
     & > * {
       flex: 1;
     }
+
+    &.condense-sm {
+      flex-direction: column;
+    }
   }
+`;
+
+const CarouselRow = styled.div`
+  @media only screen and ${deviceSizes.lg} {
+    width: 100%;
+    display: flex;
+  }
+
+  @media only screen and ${deviceSizes.md} {
+    width: 100%;
+    display: flex;
+  }
+
+  @media only screen and ${deviceSizes.sm} {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const CarouselCol = styled.div`
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const CarouselWrapper = styled.div`
@@ -195,6 +190,7 @@ export default function ProjectsCarousel({
   cols,
   aspectRatio = AspectRatio.FourToThree,
   contentAlign = CarouselContentAlignment.Center,
+  smDeviceCondense = false,
 }: Props) {
   const projsPerPage = rows * cols;
 
@@ -211,7 +207,9 @@ export default function ProjectsCarousel({
       <Carousel>
         {group(content, projsPerPage).map((page) => (
           <CarouselItem>
-            <CarouselContent className="w-100">
+            <CarouselContent
+              className={`w-100 ${smDeviceCondense && "condense-sm"}`}
+            >
               {group(
                 content.concat(
                   Array(projsPerPage - page.length).fill(defaultProject)

@@ -1,13 +1,26 @@
 {
-  "games": [
-    {
-      "header": "Condemned",
-      "description": "You are a prisoner of the first circle of Hell freed by a strange benefactor who gives you a new purpose in death - fighting your way down to the ninth circle using the chains that once held you captive.",
-      "tags": ["Unity"],
-      "imagePath": "",
-      "link": { "href": "https://bluetitanium.itch.io/vk-00m3" }
-    }
-  ],
-  "websites": [{}],
-  "programs": [{}]
+  "games": {
+    "heading": "Games",
+    "description": "Game Design and Development",
+    "projects": [
+      {
+        "header": "Condemned",
+        "description": "You are a prisoner of the first circle of Hell freed by a strange benefactor who gives you a new purpose in death - fighting your way down to the ninth circle using the chains that once held you captive.",
+        "tags": ["Unity"],
+        "imagePath": "",
+        "link": { "href": "https://bluetitanium.itch.io/vk-00m3" }
+      }
+    ]
+  },
+  "websites": {
+    "heading": "Websites",
+    "description": "Web Design and Development",
+    "projects": [{}]
+  },
+  "programs": {
+    "heading": "Programs",
+    "description": "Coding Projects",
+    "extraInfo": "*Repo available upon request or approval",
+    "projects": [{}]
+  }
 }

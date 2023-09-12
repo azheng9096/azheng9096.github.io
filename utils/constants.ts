@@ -10,3 +10,9 @@ export const deviceSizes = {
   }px)`,
   lg: `(min-width: ${breakpointsPx.md + 1}px)`,
 };
+
+export const enum AspectRatio {
+  OneToOne = "one-to-one",
+  FourToThree = "four-to-three",
+  SixteenToNine = "sixteen-to-nine",
+}

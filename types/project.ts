@@ -12,3 +12,10 @@ export type Project = {
   moreLinks?: ProjectLink[];
   requestReq?: boolean;
 };
+
+export type ProjectCategory = {
+  heading: string;
+  description: string;
+  extraInfo?: string;
+  projects: Project[];
+};
