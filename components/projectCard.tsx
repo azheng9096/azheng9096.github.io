@@ -9,7 +9,7 @@ type Props = {
   project: Project;
 };
 
-const CardImg = styled.div<{ imgPath?: string | undefined }>`
+const CardImg = styled.div<{ imgpath?: string | undefined }>`
   width: 100%;
   background-color: rgba(130, 130, 130, 0.5);
 
@@ -25,8 +25,8 @@ const CardImg = styled.div<{ imgPath?: string | undefined }>`
   background-position: center;
 
   ${(props) =>
-    props.imgPath &&
-    `background-image: url('/${projectImagePath}/${props.imgPath}')`}
+    props.imgpath &&
+    `background-image: url('/${projectImagePath}/${props.imgpath}')`}
 `;
 
 const CardHeader = styled.small`
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }: Props) {
     <Card>
       <CardImg
         className="sixteen-to-nine"
-        imgPath={project.imagePath}
+        imgpath={project.imagePath}
       ></CardImg>
       <Card.Body>
         <CardHeader>{project.tags.join(", ")}</CardHeader>
