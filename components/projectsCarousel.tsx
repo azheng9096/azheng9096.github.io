@@ -207,7 +207,7 @@ export default function ProjectsCarousel({
 
   return (
     <CarouselWrapper>
-      <Carousel>
+      <Carousel interval={null}>
         {group(content, projsPerPage).map((page) => (
           <CarouselItem>
             <CarouselContent
