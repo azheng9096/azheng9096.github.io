@@ -8,6 +8,7 @@ import VerticalSection from "@/components/sections/verticalSection";
 import { AspectRatio } from "@/utils/constants";
 import { CarouselContentAlignment } from "@/utils/projectsCarousel";
 import projectData from "@/json/projects.json";
+import Footer from "@/components/footer";
 
 const navLinks = [
   { title: "Games", href: "#games" },
@@ -80,6 +81,7 @@ export default function Home() {
             projectSpacing={5}
           />
         </HorizontalSection>
+        <Footer />
       </div>
     </>
   );
