@@ -29,16 +29,24 @@ const CarouselRow = styled.div`
     width: 100%;
     display: flex;
   }
+
+  @media only screen and ${deviceSizes.md} {
+    width: 100%;
+    display: flex;
+  }
+
+  @media only screen and ${deviceSizes.sm} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const CarouselCol = styled.div`
-  @media only screen and ${deviceSizes.lg} {
-    flex: 1;
+  flex: 1;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const CarouselContent = styled.div`
@@ -62,10 +70,10 @@ const CarouselContent = styled.div`
   @media only screen and ${deviceSizes.sm} {
     display: flex;
     justify-content: center;
-  }
 
-  & > * {
-    flex: 1;
+    & > * {
+      flex: 1;
+    }
   }
 `;
 
