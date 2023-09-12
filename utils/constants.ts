@@ -16,3 +16,5 @@ export const enum AspectRatio {
   FourToThree = "four-to-three",
   SixteenToNine = "sixteen-to-nine",
 }
+
+export const projectImagePath = "images";

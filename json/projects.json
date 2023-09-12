@@ -11,31 +11,38 @@
         "link": { "href": "https://bluetitanium.itch.io/condemned" }
       },
       {
+        "header": "VK-00M3",
+        "description": "An action-packed real-time card-battler where you strategically plan out your moves ahead of time and choose the correct time to execute those moves.",
+        "tags": ["Unity", "Android"],
+        "imagePath": "vk00m3.png",
+        "link": { "href": "https://bluetitanium.itch.io/vk-00m3" }
+      },
+      {
         "header": "Coco Run!",
         "description": "Simple 2D platformer about chasing your dog through New Bork City.",
         "tags": ["Unity"],
-        "imagePath": "",
+        "imagePath": "coco_run.png",
         "link": { "href": "https://kcy4870.itch.io/coco-run" }
       },
       {
         "header": "between worlds",
         "description": "Simple top down 2D puzzle game focusing on game level designs and game progression.",
         "tags": ["Unity"],
-        "imagePath": "",
+        "imagePath": "between_worlds.png",
         "link": { "href": "https://ec3938.itch.io/between-worlds" }
       },
       {
         "header": "Ronin",
         "description": "Simple 2D platformer to showcase visual and audio effects that enhances game feel.",
         "tags": ["Unity"],
-        "imagePath": "",
+        "imagePath": "ronin.png",
         "link": { "href": "https://1067838263.itch.io/ronin" }
       },
       {
-        "header": "https://github.com/azheng9096/MetalSlug2C",
-        "description": " High school game project. Semi-recreation of Metal Slug 2 in Python using Pygame.",
+        "header": "Metal Slug 2C",
+        "description": "High school game project. Semi-recreation of Metal Slug 2 in Python using Pygame.",
         "tags": ["Python", "Pygame"],
-        "imagePath": "",
+        "imagePath": "ms2c.png",
         "link": { "href": "https://github.com/azheng9096/MetalSlug2C" }
       }
     ]
@@ -43,12 +50,119 @@
   "websites": {
     "heading": "Websites",
     "description": "Web Design and Development",
-    "projects": [{}]
+    "projects": [
+      {
+        "header": "Airline Flight Reservation System",
+        "description": "CRUD web application that simulates an airline flight reservation system with both customer and airline staff use cases.",
+        "tags": ["Python Flask", "SQL", "Bootstrap"],
+        "imagePath": "airline_flight.png",
+        "link": {
+          "href": "https://github.com/BlueTitanium/DatabaseFinalProject",
+          "content": "Visit Repository"
+        }
+      },
+      {
+        "header": "Revac",
+        "description": "Revamping NYU Albert Course Search. Frontend to Schedge, an open source API to NYU's course catalog.",
+        "tags": ["React", "Bootstrap", "Responsive"],
+        "imagePath": "Revac_.png",
+        "link": {
+          "href": "https://azheng9096.github.io/Revac/",
+          "content": "Visit Website"
+        }
+      },
+      {
+        "header": "Arknights",
+        "description": "Responsive and interactive website showcasing an interest (Arknights).",
+        "tags": ["Responsive", "Interactive", "jQuery"],
+        "imagePath": "interest_index.html.png",
+        "link": {
+          "href": "https://azheng9096.github.io/Arknights-Website/",
+          "content": "Visit Website"
+        }
+      },
+      {
+        "header": "CH-Insp v2",
+        "description": "An elementary introduction and exploration of A-Frame with 3D models. Extension to CH-Insp (without 3D models).",
+        "tags": ["Web VR", "A-Frame"],
+        "imagePath": "CH-Insp_index.html.png",
+        "link": {
+          "href": "https://azheng9096.github.io/CH-Insp-v2/",
+          "content": "Visit Website"
+        },
+        "moreLinks": [
+          {
+            "href": "https://azheng9096.github.io/CH-Insp/",
+            "content": "Visit CH-Insp"
+          }
+        ]
+      },
+      {
+        "header": "Pokemon Database",
+        "description": "Pokemon database website. Familiarizing with SQL and using Java to handle routing. Utilizes Bootstrap for design.",
+        "tags": ["Responsive", "Interactive", "jQuery"],
+        "imagePath": "JavaPokemonDatabase_HomepageV2.html.png",
+        "link": {
+          "href": "https://github.com/azheng9096/JavaPokemonDatabase",
+          "content": "Visit Repository"
+        }
+      }
+    ]
   },
   "programs": {
     "heading": "Programs",
     "description": "Coding Projects",
     "extraInfo": "*Repo available upon request or approval",
-    "projects": [{}]
+    "projects": [
+      {
+        "header": "Forth Interpreter",
+        "description": "Prolog program that simuates an interpreter for a dialect of the Forth language.",
+        "tags": ["Prolog", "Forth"],
+        "imagePath": "interpreter.png",
+        "requestReq": true
+      },
+      {
+        "header": "Backus-Naur Form Imperative Language Interpreter",
+        "description": "Haskell-based interpreter for imperative language with BNF grammar structure. Parses source code into AST, then interprets the AST.",
+        "tags": ["Haskell", "Monads"],
+        "imagePath": "bnf_interpreter.png",
+        "requestReq": true
+      },
+      {
+        "header": "Type Inference Algorithm",
+        "description": "Haskell program that performs monomorphic and polymorphic type inference with expression given in AST form.",
+        "tags": ["Haskell"],
+        "imagePath": "type_inference.png",
+        "requestReq": true
+      },
+      {
+        "header": "E20 Assembler, Simulator, and Cache Simulator",
+        "description": "Simulates assembler for E20 assembly language, execution of its machine code, and monitors its effect on memory cache.",
+        "tags": ["Python", "Assembly"],
+        "imagePath": "e20_bkg.jpg",
+        "requestReq": true
+      },
+      {
+        "header": "Warriors and Nobles",
+        "description": "Simulation of a game of Warrior and Nobles, where different types of nobles recruit various types warriors and engage in a medieval battle.",
+        "tags": ["C++", "OOP", "Inheritance", "Separate Compilation"],
+        "imagePath": "e20_bkg.jpg",
+        "requestReq": true
+      },
+      {
+        "header": "Doubly Linked List",
+        "description": "Doubly linked list implementation with iterators and dynamic memory.",
+        "tags": ["C++", "Iterator", "Pointers"],
+        "imagePath": "doubly_linked_list.png",
+        "requestReq": true
+      },
+      {
+        "header": "Encryption Decryption",
+        "description": "High school junior project - developing an encryption algorithm based around Caesar Cipher and numeric system conversions.",
+        "tags": ["Java"],
+        "imagePath": "encryption_bkg.jpg",
+        "link": { "href": "https://github.com/azheng9096/EncryptionDecryption" }
+      }
+    ]
   }
 }

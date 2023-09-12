@@ -1,6 +1,6 @@
 "use client";
 import { Project } from "@/types/project";
-import { AspectRatio, deviceSizes } from "@/utils/constants";
+import { AspectRatio, deviceSizes, projectImagePath } from "@/utils/constants";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import styled from "styled-components";
 import "@/styles/components/projectsCarousel.scss";
@@ -173,8 +173,7 @@ const Tag = styled.p`
 const defaultProject: Project = {
   header: "Coming Soon",
   description: "Please anticipate its arrival",
-  tags: [],
-  imagePath: undefined,
+  tags: ["TBD"],
 };
 
 const group = (items: Project[], n: number) => {
@@ -215,7 +214,7 @@ export default function ProjectsCarousel({
               className={`w-100 ${smDeviceCondense && "condense-sm"}`}
             >
               {group(
-                content.concat(
+                page.concat(
                   Array(projsPerPage - page.length).fill(defaultProject)
                 ),
                 cols
@@ -223,11 +222,23 @@ export default function ProjectsCarousel({
                 <CarouselRow>
                   {row.map((col) => (
                     <CarouselCol spacing={projectSpacing}>
-                      <CarouselBoxLinkWrap>
-                        <div className={`carouselBoxDiv ${aspectRatio}`}>
+                      <CarouselBoxLinkWrap href={col.link?.href}>
+                        <div
+                          className={`carouselBoxDiv ${aspectRatio}`}
+                          style={
+                            col.imagePath
+                              ? {
+                                  backgroundImage: `url(${projectImagePath}/${col.imagePath})`,
+                                }
+                              : {}
+                          }
+                        >
                           <div className={`carouselBoxContent ${contentAlign}`}>
                             <CarouselBoxContentWrapper>
-                              <Heading>{col.header}</Heading>
+                              <Heading>
+                                {col.header}
+                                {col.requestReq && "*"}
+                              </Heading>
                               <p className="carouselBoxContentBody">
                                 {col.description}
                               </p>

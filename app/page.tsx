@@ -7,6 +7,7 @@ import HorizontalSection from "@/components/sections/horizontalSection";
 import VerticalSection from "@/components/sections/verticalSection";
 import { AspectRatio } from "@/utils/constants";
 import { CarouselContentAlignment } from "@/utils/projectsCarousel";
+import projectData from "@/json/projects.json";
 
 const navLinks = [
   { title: "Games", href: "#games" },
@@ -51,11 +52,18 @@ export default function Home() {
       </div>
       <div className="container-fluid">
         <HorizontalSection className="primary-background" {...mockSection}>
-          <ProjectsCarousel content={mock} rows={2} cols={2} smDeviceCondense />
+          <ProjectsCarousel
+            content={projectData.games.projects}
+            rows={2}
+            cols={2}
+            smDeviceCondense
+          />
         </HorizontalSection>
         <VerticalSection {...mockSection} className="secondary-background">
           <HorizontalScrollContainer>
-            <ProjectCard project={mock[0]}></ProjectCard>
+            {projectData.websites.projects.map((proj) => (
+              <ProjectCard project={proj}></ProjectCard>
+            ))}
           </HorizontalScrollContainer>
         </VerticalSection>
         <HorizontalSection
@@ -64,7 +72,7 @@ export default function Home() {
           extraInfo="*Repo available upon request and approval"
         >
           <ProjectsCarousel
-            content={mock}
+            content={projectData.programs.projects}
             rows={2}
             cols={3}
             aspectRatio={AspectRatio.OneToOne}

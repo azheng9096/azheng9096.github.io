@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import "@/styles/components/projectCard.scss";
 import styled from "styled-components";
 import { Project } from "@/types/project";
+import { projectImagePath } from "@/utils/constants";
 
 type Props = {
   project: Project;
@@ -24,7 +25,8 @@ const CardImg = styled.div<{ imgPath?: string | undefined }>`
   background-position: center;
 
   ${(props) =>
-    props.imgPath && `background-image: url('images/${props.imgPath}')`}
+    props.imgPath &&
+    `background-image: url('/${projectImagePath}/${props.imgPath}')`}
 `;
 
 const CardHeader = styled.small`
@@ -42,7 +44,10 @@ const CardHeader = styled.small`
 export default function ProjectCard({ project }: Props) {
   return (
     <Card>
-      <CardImg className="sixteen-to-nine"></CardImg>
+      <CardImg
+        className="sixteen-to-nine"
+        imgPath={project.imagePath}
+      ></CardImg>
       <Card.Body>
         <CardHeader>{project.tags.join(", ")}</CardHeader>
         <Card.Title>{project.header}</Card.Title>
