@@ -5,6 +5,8 @@ import { Carousel, CarouselItem } from "react-bootstrap";
 import styled from "styled-components";
 import "@/styles/components/projectsCarousel.scss";
 import { CarouselContentAlignment } from "@/utils/projectsCarousel";
+import { useEffect } from "react";
+import $ from "jquery";
 
 type Props = {
   content: Project[];
@@ -128,7 +130,6 @@ const CarouselBoxLinkWrap = styled.a`
   width: 100%;
 `;
 
-// .carouselBoxContentHeading
 const Heading = styled.h5`
   font-size: calc(12.5px + 0.5vw);
 `;
@@ -204,6 +205,33 @@ export default function ProjectsCarousel({
   if (!content.length) {
     content = [defaultProject];
   }
+
+  useEffect(() => {
+    $(".carouselBoxDiv").hover(
+      function () {
+        // mouseenter
+
+        // .carouselBoxContent initial display is none, need to set it to flex or else it's default block
+        $(this)
+          .find(".carouselBoxContent")
+          .stop()
+          .fadeIn(300)
+          .css("display", "flex");
+
+        // can also do $(this).find(".carouselBoxContent").stop().css("display", "flex").hide().fadeIn(300);
+        // need to hide() after css() or else it would not fade in
+      },
+      function () {
+        // mouseleave
+        $(this).find(".carouselBoxContent").stop().fadeOut(300);
+      }
+    );
+
+    $(".carouselBoxContentBody button").click(function (e) {
+      e.stopPropagation(); // works without this line, although it's supposed to prevent event bubbling
+      e.preventDefault(); // needed
+    });
+  });
 
   return (
     <CarouselWrapper>

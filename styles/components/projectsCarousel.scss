@@ -23,10 +23,9 @@
   .carouselBoxContent {
     height: 100%;
 
-    // display: none; /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
+    display: none; /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
     /* display: flex; */ /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
     flex-direction: column;
-    display: flex; // CHANGE TO DISPLAY NONE LATER
 
     position: absolute;
     width: 100%;
