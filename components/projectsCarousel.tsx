@@ -207,45 +207,47 @@ export default function ProjectsCarousel({
   }
 
   return (
-    <Carousel>
-      {group(content, projsPerPage).map((page) => (
-        <CarouselItem>
-          <CarouselContent className="w-100">
-            {group(
-              content.concat(
-                Array(projsPerPage - page.length).fill(defaultProject)
-              ),
-              cols
-            ).map((row) => (
-              <CarouselRow>
-                {row.map((col) => (
-                  <CarouselCol>
-                    <CarouselBoxLinkWrap>
-                      <div className={`carouselBoxDiv ${aspectRatio}`}>
-                        <div className={`carouselBoxContent ${contentAlign}`}>
-                          <CarouselBoxContentWrapper>
-                            <Heading>{col.header}</Heading>
-                            <p className="carouselBoxContentBody">
-                              {col.description}
-                            </p>
-                            <div className="carouselBoxContentTagsContainer">
-                              {col.tags.map((tag) => (
-                                <Tag className="carouselBoxContentTag">
-                                  {tag}
-                                </Tag>
-                              ))}
-                            </div>
-                          </CarouselBoxContentWrapper>
+    <CarouselWrapper>
+      <Carousel>
+        {group(content, projsPerPage).map((page) => (
+          <CarouselItem>
+            <CarouselContent className="w-100">
+              {group(
+                content.concat(
+                  Array(projsPerPage - page.length).fill(defaultProject)
+                ),
+                cols
+              ).map((row) => (
+                <CarouselRow>
+                  {row.map((col) => (
+                    <CarouselCol>
+                      <CarouselBoxLinkWrap>
+                        <div className={`carouselBoxDiv ${aspectRatio}`}>
+                          <div className={`carouselBoxContent ${contentAlign}`}>
+                            <CarouselBoxContentWrapper>
+                              <Heading>{col.header}</Heading>
+                              <p className="carouselBoxContentBody">
+                                {col.description}
+                              </p>
+                              <div className="carouselBoxContentTagsContainer">
+                                {col.tags.map((tag) => (
+                                  <Tag className="carouselBoxContentTag">
+                                    {tag}
+                                  </Tag>
+                                ))}
+                              </div>
+                            </CarouselBoxContentWrapper>
+                          </div>
                         </div>
-                      </div>
-                    </CarouselBoxLinkWrap>
-                  </CarouselCol>
-                ))}
-              </CarouselRow>
-            ))}
-          </CarouselContent>
-        </CarouselItem>
-      ))}
-    </Carousel>
+                      </CarouselBoxLinkWrap>
+                    </CarouselCol>
+                  ))}
+                </CarouselRow>
+              ))}
+            </CarouselContent>
+          </CarouselItem>
+        ))}
+      </Carousel>
+    </CarouselWrapper>
   );
 }
