@@ -207,10 +207,8 @@ export default function ProjectsCarousel({
   }
 
   useEffect(() => {
-    $(".carouselBoxDiv").hover(
-      function () {
-        // mouseenter
-
+    $(".carouselBoxDiv")
+      .on("mouseenter", function () {
         // .carouselBoxContent initial display is none, need to set it to flex or else it's default block
         $(this)
           .find(".carouselBoxContent")
@@ -220,14 +218,12 @@ export default function ProjectsCarousel({
 
         // can also do $(this).find(".carouselBoxContent").stop().css("display", "flex").hide().fadeIn(300);
         // need to hide() after css() or else it would not fade in
-      },
-      function () {
-        // mouseleave
+      })
+      .on("mouseleave", function () {
         $(this).find(".carouselBoxContent").stop().fadeOut(300);
-      }
-    );
+      });
 
-    $(".carouselBoxContentBody button").click(function (e) {
+    $(".carouselBoxContentBody button").on("click", function (e) {
       e.stopPropagation(); // works without this line, although it's supposed to prevent event bubbling
       e.preventDefault(); // needed
     });
