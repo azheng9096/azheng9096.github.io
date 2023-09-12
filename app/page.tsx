@@ -40,8 +40,6 @@ export default function Home() {
       <NavBar links={navLinks} />
       <div className="container-fluid">
         <Header links={socialLinks} />
-      </div>
-      <div className="container-fluid">
         <HorizontalSection
           className="primary-background"
           {...projectData.games}
