@@ -56,8 +56,8 @@ export default function Home() {
           className="secondary-background"
         >
           <HorizontalScrollContainer>
-            {projectData.websites.projects.map((proj) => (
-              <ProjectCard project={proj}></ProjectCard>
+            {projectData.websites.projects.map((proj, idx) => (
+              <ProjectCard project={proj} key={idx}></ProjectCard>
             ))}
           </HorizontalScrollContainer>
         </VerticalSection>

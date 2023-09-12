@@ -77,7 +77,7 @@ export default function Header({ links }: Props) {
           <Image src={profilePic} alt="Profile Picture" />
           <HeaderTextContainer>
             <Title>
-              Welcome to <span id="headerName">Anna Zheng's</span> Portfolio
+              Welcome to <span id="headerName">Anna Zheng&#39;s</span> Portfolio
             </Title>
             <hr />
             <Sub>
