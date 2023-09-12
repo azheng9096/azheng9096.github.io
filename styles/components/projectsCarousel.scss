@@ -1,0 +1,81 @@
+.carouselBoxDiv {
+  position: relative;
+  width: 100%;
+
+  background-color: rgba(130, 130, 130, 0.5);
+  transition: background-color ease-in-out 0.3s; /* SET THIS AS SAME DURATION AS .carouselBoxContent IN CUSTOM.JS */
+
+  display: block;
+
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  .carouselBoxContent {
+    height: 100%;
+
+    // display: none; /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
+    /* display: flex; */ /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
+    flex-direction: column;
+    display: flex; // DELETE LATER
+
+    // position: absolute;
+
+    width: 100%;
+
+    /* overflow-y: auto */ /* needs to be in abs setup, does not work with flex setup */
+
+    /* Can use background-color to test the difference between the two .carouselBoxContent setup if needed */
+    /* background-color:rgb(185, 185, 185); */
+
+    /*background-color:rgba(70, 70, 70, 0.45);*/
+    /* color: #212529; */ /* for dark color text */
+    color: whitesmoke;
+
+    &.carousel-content-center {
+      justify-content: center;
+      text-align: center;
+
+      .carouselBoxContentTagsContainer {
+        justify-content: center;
+      }
+    }
+
+    &.carousel-content-end {
+      justify-content: end;
+    }
+  }
+}
+
+.one-to-one {
+  aspect-ratio: 1 / 1;
+
+  @supports not (aspect-ratio: 1/1) {
+    padding-bottom: 100%;
+
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.four-to-three {
+  aspect-ratio: 4/3;
+
+  @supports not (aspect-ratio: 4/3) {
+    padding-bottom: 75%;
+
+    &::after {
+      content: "";
+    }
+  }
+}

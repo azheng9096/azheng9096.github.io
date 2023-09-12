@@ -21,6 +21,17 @@ const socialLinks = [
   },
 ];
 
+const mock = [
+  {
+    header: "Condemned",
+    description:
+      "You are a prisoner of the first circle of Hell freed by a strange benefactor who gives you a new purpose in death - fighting your way down to the ninth circle using the chains that once held you captive.",
+    tags: ["Unity"],
+    imagePath: "",
+    link: { href: "https://bluetitanium.itch.io/vk-00m3" },
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -28,9 +39,9 @@ export default function Home() {
       <div className="container-fluid">
         <Header links={socialLinks} />
       </div>
-      {/* <FullHeightContainer className="primary-background">
-        <ProjectsCarousel />
-      </FullHeightContainer> */}
+      <FullHeightContainer className="primary-background">
+        <ProjectsCarousel content={mock} rows={2} cols={2} />
+      </FullHeightContainer>
     </>
   );
 }
