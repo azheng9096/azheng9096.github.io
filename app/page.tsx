@@ -1,4 +1,3 @@
-import FullHeightContainer from "@/components/fullHeightContainer";
 import Header from "@/components/header";
 import HorizontalScrollContainer from "@/components/horizontalScrollContainer";
 import NavBar from "@/components/navbar";

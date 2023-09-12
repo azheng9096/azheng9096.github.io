@@ -7,8 +7,36 @@
         "header": "Condemned",
         "description": "You are a prisoner of the first circle of Hell freed by a strange benefactor who gives you a new purpose in death - fighting your way down to the ninth circle using the chains that once held you captive.",
         "tags": ["Unity"],
+        "imagePath": "condemned.png",
+        "link": { "href": "https://bluetitanium.itch.io/condemned" }
+      },
+      {
+        "header": "Coco Run!",
+        "description": "Simple 2D platformer about chasing your dog through New Bork City.",
+        "tags": ["Unity"],
         "imagePath": "",
-        "link": { "href": "https://bluetitanium.itch.io/vk-00m3" }
+        "link": { "href": "https://kcy4870.itch.io/coco-run" }
+      },
+      {
+        "header": "between worlds",
+        "description": "Simple top down 2D puzzle game focusing on game level designs and game progression.",
+        "tags": ["Unity"],
+        "imagePath": "",
+        "link": { "href": "https://ec3938.itch.io/between-worlds" }
+      },
+      {
+        "header": "Ronin",
+        "description": "Simple 2D platformer to showcase visual and audio effects that enhances game feel.",
+        "tags": ["Unity"],
+        "imagePath": "",
+        "link": { "href": "https://1067838263.itch.io/ronin" }
+      },
+      {
+        "header": "https://github.com/azheng9096/MetalSlug2C",
+        "description": " High school game project. Semi-recreation of Metal Slug 2 in Python using Pygame.",
+        "tags": ["Python", "Pygame"],
+        "imagePath": "",
+        "link": { "href": "https://github.com/azheng9096/MetalSlug2C" }
       }
     ]
   },

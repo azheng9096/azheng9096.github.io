@@ -174,7 +174,7 @@ const defaultProject: Project = {
   header: "Coming Soon",
   description: "Please anticipate its arrival",
   tags: [],
-  imagePath: null,
+  imagePath: undefined,
 };
 
 const group = (items: Project[], n: number) => {
