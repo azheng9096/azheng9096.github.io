@@ -13,6 +13,7 @@ type Props = {
   aspectRatio?: AspectRatio;
   contentAlign?: CarouselContentAlignment;
   smDeviceCondense?: boolean;
+  projectSpacing?: number;
 };
 
 const CarouselContent = styled.div`
@@ -64,12 +65,14 @@ const CarouselRow = styled.div`
   }
 `;
 
-const CarouselCol = styled.div`
+const CarouselCol = styled.div<{ spacing: number | undefined }>`
   flex: 1;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin: ${(props) => props.spacing || 0}px;
 `;
 
 const CarouselWrapper = styled.div`
@@ -191,6 +194,7 @@ export default function ProjectsCarousel({
   aspectRatio = AspectRatio.FourToThree,
   contentAlign = CarouselContentAlignment.Center,
   smDeviceCondense = false,
+  projectSpacing,
 }: Props) {
   const projsPerPage = rows * cols;
 
@@ -218,7 +222,7 @@ export default function ProjectsCarousel({
               ).map((row) => (
                 <CarouselRow>
                   {row.map((col) => (
-                    <CarouselCol>
+                    <CarouselCol spacing={projectSpacing}>
                       <CarouselBoxLinkWrap>
                         <div className={`carouselBoxDiv ${aspectRatio}`}>
                           <div className={`carouselBoxContent ${contentAlign}`}>

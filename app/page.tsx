@@ -50,13 +50,18 @@ export default function Home() {
         <HorizontalSection className="primary-background" {...mockSection}>
           <ProjectsCarousel content={mock} rows={2} cols={2} smDeviceCondense />
         </HorizontalSection>
-        <HorizontalSection className="primary-background" {...mockSection}>
+        <HorizontalSection
+          className="primary-background"
+          {...mockSection}
+          extraInfo="*Repo available upon request and approval"
+        >
           <ProjectsCarousel
             content={mock}
             rows={2}
             cols={3}
             aspectRatio={AspectRatio.OneToOne}
             contentAlign={CarouselContentAlignment.End}
+            projectSpacing={5}
           />
         </HorizontalSection>
       </div>
