@@ -1,5 +1,5 @@
 "use client";
-import { Card } from "react-bootstrap";
+import { ButtonGroup, Card, Dropdown, DropdownButton } from "react-bootstrap";
 import "@/styles/components/projectCard.scss";
 import styled from "styled-components";
 import { Project } from "@/types/project";
@@ -52,9 +52,26 @@ export default function ProjectCard({ project }: Props) {
         <CardHeader>{project.tags.join(", ")}</CardHeader>
         <Card.Title>{project.header}</Card.Title>
         <Card.Text>{project.description}</Card.Text>
-        <a href={project.link?.href} className="btn">
-          {project.link?.content || "Currently Unavailable"}
-        </a>
+        <Dropdown as={ButtonGroup}>
+          <a href={project.link?.href} className="btn">
+            {project.link?.content || "Currently Unavailable"}
+          </a>
+          {project.moreLinks && (
+            <>
+              <Dropdown.Toggle />
+              <Dropdown.Menu>
+                {project.moreLinks.map((link, i, proj) => (
+                  <>
+                    <Dropdown.Item href={link.href} key={i}>
+                      {link.content || "Currently Unavailable"}
+                    </Dropdown.Item>
+                    {i < proj.length - 1 && <hr className="dropdown-divider" />}
+                  </>
+                ))}
+              </Dropdown.Menu>
+            </>
+          )}
+        </Dropdown>
       </Card.Body>
     </Card>
   );

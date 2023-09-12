@@ -102,14 +102,14 @@
         color: var(--primary-text-color);
 
         transition: color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
-      }
 
-      li:hover .dropdown-item {
-        -webkit-box-shadow: inset 4px 0px 0px -1px #1ef4a2;
-        -moz-box-shadow: inset 4px 0px 0px -1px #1ef4a2;
-        box-shadow: inset 4px 0px 0px -1px #1ef4a2;
+        &:hover {
+          -webkit-box-shadow: inset 4px 0px 0px -1px var(--secondary-text-color);
+          -moz-box-shadow: inset 4px 0px 0px -1px var(--secondary-text-color);
+          box-shadow: inset 4px 0px 0px -1px var(--secondary-text-color);
 
-        color: var(--secondary-text-color);
+          color: var(--secondary-text-color);
+        }
       }
     }
   }
