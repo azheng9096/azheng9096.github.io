@@ -135,6 +135,43 @@ const Heading = styled.h5`
   font-size: calc(12.5px + 0.5vw);
 `;
 
+const Tag = styled.p`
+  margin-bottom: 5px;
+
+  width: fit-content;
+  border: 1px solid var(--primary-text-color);
+  text-transform: uppercase;
+
+  @media only screen and ${deviceSizes.lg} {
+    padding: 0.1vw 1.25vw;
+
+    border-radius: 1.5vw;
+    margin-right: 0.75vw;
+
+    font-size: calc(6.75px + 0.25vw);
+    letter-spacing: 0.5px;
+  }
+
+  @media only screen and ${deviceSizes.md} {
+    padding: 0.15vw 1.75vw;
+    margin-right: 2vw;
+
+    border-radius: 2vw;
+
+    font-size: calc(5.25px + 0.25vw);
+    letter-spacing: 0.5px;
+  }
+
+  @media only screen and ${deviceSizes.sm} {
+    padding: 0.15vw 3.75vw;
+
+    border-radius: 3.5vw;
+
+    font-size: 2vw;
+    letter-spacing: 0.5px;
+  }
+`;
+
 const defaultProject: Project = {
   header: "Coming Soon",
   description: "Please anticipate its arrival",
@@ -193,7 +230,9 @@ export default function ProjectsCarousel({
                             </p>
                             <div className="carouselBoxContentTagsContainer">
                               {col.tags.map((tag) => (
-                                <p className="carouselBoxContentTag">{tag}</p>
+                                <Tag className="carouselBoxContentTag">
+                                  {tag}
+                                </Tag>
                               ))}
                             </div>
                           </CarouselBoxContentWrapper>

@@ -26,20 +26,21 @@
     // display: none; /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
     /* display: flex; */ /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
     flex-direction: column;
-    display: flex; // DELETE LATER
+    display: flex; // CHANGE TO DISPLAY NONE LATER
 
-    // position: absolute;
-
+    position: absolute;
     width: 100%;
+    color: var(--primary-text-color);
 
-    /* overflow-y: auto */ /* needs to be in abs setup, does not work with flex setup */
+    .carouselBoxContentBody {
+      font-size: calc(9.5px + 0.35vw);
+      margin-bottom: 15px;
+    }
 
-    /* Can use background-color to test the difference between the two .carouselBoxContent setup if needed */
-    /* background-color:rgb(185, 185, 185); */
-
-    /*background-color:rgba(70, 70, 70, 0.45);*/
-    /* color: #212529; */ /* for dark color text */
-    color: whitesmoke;
+    .carouselBoxContentTagsContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     &.carousel-content-center {
       justify-content: center;
@@ -76,6 +77,13 @@
 
     &::after {
       content: "";
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .carouselBoxContentTag {
+      margin-left: calc(3.5px + 0.25vw);
+      margin-right: calc(3.5px + 0.25vw);
     }
   }
 }
