@@ -1,7 +1,11 @@
+import FullHeightContainer from "@/components/fullHeightContainer";
 import Header from "@/components/header";
+import HorizontalScrollContainer from "@/components/horizontalScrollContainer";
 import NavBar from "@/components/navbar";
+import ProjectCard from "@/components/projectCard";
 import ProjectsCarousel from "@/components/projectsCarousel";
 import HorizontalSection from "@/components/sections/horizontalSection";
+import VerticalSection from "@/components/sections/verticalSection";
 import { AspectRatio } from "@/utils/constants";
 import { CarouselContentAlignment } from "@/utils/projectsCarousel";
 
@@ -50,6 +54,11 @@ export default function Home() {
         <HorizontalSection className="primary-background" {...mockSection}>
           <ProjectsCarousel content={mock} rows={2} cols={2} smDeviceCondense />
         </HorizontalSection>
+        <VerticalSection {...mockSection} className="secondary-background">
+          <HorizontalScrollContainer>
+            <ProjectCard project={mock[0]}></ProjectCard>
+          </HorizontalScrollContainer>
+        </VerticalSection>
         <HorizontalSection
           className="primary-background"
           {...mockSection}

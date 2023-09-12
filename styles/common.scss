@@ -9,3 +9,39 @@
 .secondary-background {
   background-color: var(--secondary-background-color);
 }
+
+.one-to-one {
+  aspect-ratio: 1 / 1;
+
+  @supports not (aspect-ratio: 1/1) {
+    padding-bottom: 100%;
+
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.four-to-three {
+  aspect-ratio: 4/3;
+
+  @supports not (aspect-ratio: 4/3) {
+    padding-bottom: 75%;
+
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.sixteen-to-nine {
+  aspect-ratio: 16 / 9;
+
+  @supports not (aspect-ratio: 16 / 9) {
+    padding-bottom: 56.25%;
+
+    &::after {
+      content: "";
+    }
+  }
+}

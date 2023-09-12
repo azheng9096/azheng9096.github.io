@@ -1,13 +1,13 @@
 type ProjectLink = {
   content?: string;
-  href: string | null;
+  href: string | undefined;
 };
 
 export type Project = {
   header: string;
   description: string;
   tags: string[];
-  imagePath: string | null;
+  imagePath: string | undefined;
   link?: ProjectLink;
   moreLinks?: ProjectLink[];
   requestReq?: boolean;
