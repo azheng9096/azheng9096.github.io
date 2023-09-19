@@ -146,7 +146,7 @@
         "header": "Warriors and Nobles",
         "description": "Simulation of a game of Warrior and Nobles, where different types of nobles recruit various types warriors and engage in a medieval battle.",
         "tags": ["C++", "OOP", "Inheritance", "Separate Compilation"],
-        "imagePath": "e20_bkg.jpg",
+        "imagePath": "warriors_and_nobles.jpg",
         "requestReq": true
       },
       {
