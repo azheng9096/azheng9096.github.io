@@ -82,6 +82,16 @@
         }
       },
       {
+        "header": "Cafe Day",
+        "description": "A game made with HTML, CSS, and JavaScript which simulates a day of making drinks at a cafe",
+        "tags": ["HTML, CSS, JavaScript"],
+        "imagePath": "cafe_day.png",
+        "link": {
+          "href": "https://azheng9096.github.io/IDM-Web-Dev/final/",
+          "content": "Visit Website"
+        }
+      },
+      {
         "header": "CH-Insp v2",
         "description": "An elementary introduction and exploration of A-Frame with 3D models. Extension to CH-Insp (without 3D models).",
         "tags": ["Web VR", "A-Frame"],
