@@ -54,11 +54,13 @@ const FooterLeft = styled.div`
     align-self: stretch;
   }
 
+  /*
   @media only screen and ((${deviceSizes.lg}) or (${deviceSizes.md})) {
     hr:not([size]) {
       height: 100%;
     }
   }
+  */
 
   @media only screen and ${deviceSizes.sm} {
     flex-direction: column;
