@@ -110,7 +110,7 @@
       {
         "header": "Pokemon Database",
         "description": "Pokemon database website. Familiarizing with SQL and using Java to handle routing. Utilizes Bootstrap for design.",
-        "tags": ["Responsive", "Interactive", "jQuery"],
+        "tags": ["Responsive", "Interactive", "Java"],
         "imagePath": "JavaPokemonDatabase_HomepageV2.html.png",
         "link": {
           "href": "https://github.com/azheng9096/JavaPokemonDatabase",
