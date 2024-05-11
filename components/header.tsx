@@ -77,13 +77,12 @@ export default function Header({ links }: Props) {
           <Image src={profilePic} alt="Profile Picture" />
           <HeaderTextContainer>
             <Title>
-              Welcome to <span id="headerName">Anna Zheng&#39;s</span> Portfolio
+              I'm <span id="headerName">Anna Zheng</span>, Software Engineer
             </Title>
             <hr />
             <Sub>
               <p>
-                Code, Design, Create. Contact me at{" "}
-                <span>anna.zheng@nyu.edu</span>
+                Passionate About Building Intuitive Products and Experiences
               </p>
             </Sub>
           </HeaderTextContainer>
@@ -93,7 +92,9 @@ export default function Header({ links }: Props) {
           <ul>
             {links.map((link, idx) => (
               <li key={idx}>
-                <a href={link.href}>{link.title}</a>
+                <a href={link.href} target="_blank">
+                  {link.title}
+                </a>
               </li>
             ))}
           </ul>
