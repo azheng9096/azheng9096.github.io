@@ -179,7 +179,7 @@ export default function Footer({ links, icons }: Props) {
               </li>
             ))}
           </FooterLinks>
-          <p>Created by Anna Zheng</p>
+          <p>Website Built by Anna Zheng</p>
         </FooterTextContainer>
       </FooterLeft>
 

@@ -29,7 +29,7 @@ const socialLinks = [
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com/in/anna-zheng-965866203/",
+    href: "https://www.linkedin.com/in/azheng9096/",
     imagePath: "linkedin.png",
   },
 ];
