@@ -52,8 +52,18 @@
     "description": "Web Design and Development",
     "projects": [
       {
+        "header": "Expense Tracker",
+        "description": "Full Stack CRUD web application for tracking personal expenses and income.",
+        "tags": ["React", "MongoDB", "Express", "Node.js"],
+        "imagePath": "expense_tracker.png",
+        "link": {
+          "href": "https://github.com/azheng9096/Budget-FS",
+          "content": "Visit Repository"
+        }
+      },
+      {
         "header": "Airline Flight Reservation System",
-        "description": "CRUD web application that simulates an airline flight reservation system with both customer and airline staff use cases.",
+        "description": "Full Stack CRUD web application that simulates an airline flight reservation system with both customer and airline staff use cases.",
         "tags": ["Python Flask", "SQL", "Bootstrap"],
         "imagePath": "airline_flight.png",
         "link": {
