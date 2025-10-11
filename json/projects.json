@@ -54,7 +54,14 @@
       {
         "header": "Expense Tracker",
         "description": "Full Stack CRUD web application for tracking personal expenses and income.",
-        "tags": ["React", "MongoDB", "Express", "Node.js"],
+        "tags": [
+          "React",
+          "MongoDB",
+          "Express.js",
+          "Node.js",
+          "TanStack Query",
+          "Zustand"
+        ],
         "imagePath": "expense_tracker.png",
         "link": {
           "href": "https://github.com/azheng9096/Budget-FS",
@@ -64,7 +71,7 @@
       {
         "header": "Airline Flight Reservation System",
         "description": "Full Stack CRUD web application that simulates an airline flight reservation system with both customer and airline staff use cases.",
-        "tags": ["Python Flask", "SQL", "Bootstrap"],
+        "tags": ["Python", "Flask", "SQL", "Bootstrap"],
         "imagePath": "airline_flight.png",
         "link": {
           "href": "https://github.com/BlueTitanium/DatabaseFinalProject",
