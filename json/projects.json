@@ -52,6 +52,16 @@
     "description": "Web Design and Development",
     "projects": [
       {
+        "header": "ContractAI",
+        "description": "Web application that utilizes AI to analyze and summarize legal contracts, providing users with key insights and actionable information.",
+        "tags": ["React", "AI", "React Router", "TailwindCSS", "Shadcn UI"],
+        "imagePath": "contractai.png",
+        "link": {
+          "href": "https://github.com/azheng9096/contractai",
+          "content": "Visit Repository"
+        }
+      },
+      {
         "header": "Expense Tracker",
         "description": "Full Stack CRUD web application for tracking personal expenses and income.",
         "tags": [
